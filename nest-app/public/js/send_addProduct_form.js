@@ -19,7 +19,7 @@ form.addEventListener("submit", function(e) {
   };
   console.log(JSON.stringify(data));
 
-  fetch("https://clothing-shop-5n2c.onrender.com/products/add", {
+  fetch("https://shop-1ro8.onrender.com/products/add", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -28,7 +28,7 @@ form.addEventListener("submit", function(e) {
   }).then((responseData) => {
       console.log("Service response:", responseData);
       if (responseData && responseData.ok) {
-        window.location.replace("https://clothing-shop-5n2c.onrender.com");
+        window.location.replace("https://shop-1ro8.onrender.com");
       }})
     .catch((error) => {
       console.error("Error:", error);

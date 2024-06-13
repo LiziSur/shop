@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const userId = localStorage.getItem('userId');
   if (userId) {
     const ordersLink = document.getElementById('orders-link');
-    ordersLink.href = `https://clothing-shop-5n2c.onrender.com/order/all/${encodeURIComponent(userId)}`;
+    ordersLink.href = `https://shop-1ro8.onrender.com/order/all/${encodeURIComponent(userId)}`;
   }
 });
 

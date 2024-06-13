@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (userId) {
         loginLi.style.display = "none";
         profileLi.style.display = "block";
-        profileLink.href = `https://clothing-shop-5n2c.onrender.com/user/profile/${encodeURIComponent(userId)}`;
+        profileLink.href = `https://shop-1ro8.onrender.com/user/profile/${encodeURIComponent(userId)}`;
     } else {
         loginLi.style.display = "block";
         profileLi.style.display = "none";

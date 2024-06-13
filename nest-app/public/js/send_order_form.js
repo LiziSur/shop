@@ -83,7 +83,7 @@ button.addEventListener('click', function (e) {
       totalCost: totalCost,
     };
 
-    fetch('https://clothing-shop-5n2c.onrender.com/order/new', {
+    fetch('https://shop-1ro8.onrender.com/order/new', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -92,7 +92,7 @@ button.addEventListener('click', function (e) {
     })
       .then((data) => {
         console.log('Service response:', data);
-        window.location.replace('https://clothing-shop-5n2c.onrender.com');
+        window.location.replace('https://shop-1ro8.onrender.com');
         localStorage.removeItem('products');
       })
       .catch((error) => {

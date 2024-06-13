@@ -20,7 +20,7 @@ const submitForm = (formId, url) => {
       if (responseData && responseData.userId) {
         console.log('logged in');
         localStorage.setItem('userId', responseData.userId);
-        window.location.replace("https://clothing-shop-5n2c.onrender.com");
+        window.location.replace("https://shop-1ro8.onrender.com");
       }
     }).catch((error) => {
       console.error("Error:", error);
@@ -28,5 +28,5 @@ const submitForm = (formId, url) => {
   });
 };
 
-submitForm('loginForm', 'https://clothing-shop-5n2c.onrender.com/user/login');
-submitForm('signUpForm', 'https://clothing-shop-5n2c.onrender.com/user/signUp');
+submitForm('loginForm', 'https://shop-1ro8.onrender.com/user/login');
+submitForm('signUpForm', 'https://shop-1ro8.onrender.com/user/signUp');
