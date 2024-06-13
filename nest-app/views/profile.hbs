@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>created-by-pavel</title>
+  <link rel="stylesheet" href="/css/profile.css" type="text/css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="created-by-liza. The official website of created-by-liza. EST 2024. SPB"/>
+  <meta name="google" content="notranslate"/>
+  <meta name="keywords" content="created-by-liza, clothes, store, shop, online store, buy clothes, stylish clothes"/>
+</head>
+
+<body>
+<div id="wrapper">
+ {{> header}}
+  <main class="main">
+    <div id="left">
+      <div id="helloMessage">
+        <h2>YOUR PERSONAL DASHBOARD</h2>
+        <p>Welcome {{viewData.name}}. Here you can keep track of your recent activity, request returns and exchange as well as
+          view and edit your account</p>
+      </div>
+      <div id="info">
+        <div id="top">
+          <p>YOUR PERSONAL INFORMATION</p>
+          <span><a href="#">Edit</a> / <a href="#">Change Password</a></span>
+        </div>
+        <div class="dashboard">
+          <div class="dashboard-title">
+            <p><b>HELLO</b></p>my name is.</p>
+          </div>
+          <div class="user-table">
+            <div class="user-info">
+              <div class="user-data"><p>Name</p></div>
+              <div class="user-data"><p>Second Name</p></div>
+              <div class="user-data"><p>Email</p></div>
+            </div>
+            <div class="user-info">
+              <div class="user-data"><p>{{viewData.name}}</p></div>
+              <div class="user-data"><p>{{viewData.secondName}}</p></div>
+              <div class="user-data"><p>{{viewData.email}}</p></div>
+              {{#if viewData.role}}
+                {{#ifEquals viewData.role "ADMIN"}}
+                  <div class="user-data"><p>Admin</p></div>
+                {{/ifEquals}}
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="right">
+      <ul>
+        {{#if viewData.role}}
+          {{#ifEquals viewData.role "ADMIN"}}
+            <li><a href="https://clothing-shop-5n2c.onrender.com/addProduct">ADD PRODUCT</a></li>
+          {{/ifEquals}}
+        {{/if}}
+        <li><a id="orders-link" href="https://clothing-shop-5n2c.onrender.com/order/all">ORDERS AND RETURNS</a></li>
+        <li><a id="log-out-link" href="https://clothing-shop-5n2c.onrender.com/">LOG OUT</a></li>
+      </ul>
+    </div>
+  </main>
+  {{> footer}}
+</div>
+<script src="/js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Clothes item - created-by-pavel</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/item.css" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="created-by-liza. The official website of created-by-liza. EST 2024. SPB"/>
+    <meta name="keywords" content="created-by-liza, clothes, store, shop, online store, buy clothes, stylish clothes"/>
+    <meta name="keywords" content=" магазин, одежда"/>
+</head>
+
+<body>
+<div id="wrapper">
+    <header class="header"></header>
+
+    <main class="main">
+        <section class="carousel" aria-label="carousel" Tabindex="0">
+            <a class="carousel__skip-link" href="#skip-link">Skip the Carousel</a>
+            <div class="slides">
+                <div class="slides-item slide-1" id="slide-1" aria-label="slide 1 of 4" tabindex="0">
+                    <img src="{{viewData.images.[0].imageUrl}}">
+                </div>
+                <div class="slides-item slide-2" id="slide-2" aria-label="slide 2 of 4" tabindex="0">
+                    <img src="{{viewData.images.[1].imageUrl}}">
+                </div>
+                <div class="slides-item slide-3" id="slide-3" aria-label="slide 3 of 4" tabindex="0">
+                    <img src="{{viewData.images.[2].imageUrl}}">
+                </div>
+                <div class="slides-item slide-4" id="slide-4" aria-label="slide 4 of 4" tabindex="0">
+                    <img src="{{viewData.images.[3].imageUrl}}">
+                </div>
+            </div>
+            <div class="carousel__skip-message" id="skip-link" tabindex="0"></div>
+        </section>
+        <div class="carousel__nav">
+            <a class="slider-nav" href="#slide-1" aria-label="Go to slide 1">1</a>
+            <a class="slider-nav" href="#slide-2" aria-label="Go to slide 2">2</a>
+            <a class="slider-nav" href="#slide-3" aria-label="Go to slide 3">3</a>
+            <a class="slider-nav" href="#slide-4" aria-label="Go to slide 4">4</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div id="item-body">
+            <div id="item-body__logo">
+                <a href="https://clothing-shop-5n2c.onrender.com"><h1>created-by-pavel</h1></a>
+            </div>
+            <div id="item-body__description">
+                <span><b>{{viewData.name}}</b></span>
+                <p>{{viewData.description}}</p>
+            </div>
+            <div id="item-body__size-button">
+              <select name="size" id="sizeSelect">
+                {{#each sizes}}
+                  <option value="{{ this }}">{{ this }}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div id="item-body__buy-button">
+                <button text="buy" hover-text="{{viewData.price}} $"></button>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<div id="popup" class="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="" class="popup__close close-popup">X</a>
+            <div class="popup__title">success</div>
+            <div class="popup__text">your item has gone to cart</div>
+        </div>
+    </div>
+</div>
+<script src="/js/buyButton.js"></script>
+</body>
+</html>

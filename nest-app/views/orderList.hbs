@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>created-by-pavel</title>
+  <link rel="stylesheet" href="/css/orderList.css" type="text/css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="created-by-liza. The official website of created-by-liza. EST 2024. SPB"/>
+  <meta name="google" content="notranslate"/>
+  <meta name="keywords" content="created-by-liza, clothes, store, shop, online store, buy clothes, stylish clothes"/>
+</head>
+
+<body>
+<div id="wrapper">
+ {{> header}}
+  <main class="main">
+    <div class="title">
+      <h3>ORDERS: {{length}}</h3>
+    </div>
+    <div class="orders-wrapper">
+      {{#each viewData}}
+        <div class="order">
+          <p><strong>Order ID:</strong> {{id}}</p>
+          <p><strong>Total cost:</strong> {{totalCost}}</p>
+          <p><strong>Status:</strong> {{status}}</p>
+          <p><strong>Products:</strong></p>
+          <ul>
+            {{#each this.products}}
+              <li><img src="{{images.[0].imageUrl}}" alt="{{name}} Image"></li>
+            {{/each}}
+          </ul>
+        </div>
+      {{/each}}
+    </div>
+  </main>
+  {{> footer}}
+</div>
+</body>
+</html>

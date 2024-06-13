@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/store.css" type="text/css"/>
+    <title>Store - created-by-pavel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="created-by-liza. The official website of created-by-pavel. EST 2024. SPB"/>
+    <meta name="keywords" content="created-by-liza, clothes, store, shop, online store, buy clothes, stylish clothes"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" defer></script>
+    <script src="/js/store_animation.js" defer></script>
+</head>
+
+<body>
+<div id="wrapper">
+    {{> header}}
+    <main class="main">
+        <div id="store-wrapper">
+        {{#each viewData}}
+          <div class="product">
+            <a href="https://clothing-shop-5n2c.onrender.com/products/{{id}}"><img src="{{images.[0].imageUrl}}" alt="{{name}} Image"></a>
+          </div>
+        {{/each}}
+        </div>
+<!--      <img src="https://drive.google.com/thumbnail?id=1mPKdV_6nY2Suu9ElqmG9C70ag_6vGGnV&sz=w1000">-->
+        <div class="coords">
+            <p>GET.COORDINATES</p>
+            <p>GET.ENJOYED</p>
+            <span class="x">0</span> / <span class="y">0</span><br>
+            <p>\</p>
+        </div>
+      <div id="page-buttons">
+        <button id="previous">&lt</button>
+        <button id="next">&gt</button>
+      </div>
+    </main>
+    <script type="text/javascript" src="/js/coordinates.js"></script>
+    <script src="/js/next_previous_buttons.js"></script>
+  {{> footer}}
+</div>
+</body>
+</html>
