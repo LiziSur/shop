@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Order - created-by-liza</title>
+  <link rel="stylesheet" href="/css/order.css" type="text/css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="created-by-liza. The official website of created-by-liza. EST 2024. SPB"/>
+  <meta name="keywords" content="created-by-liza, clothes, store, shop, online store, buy clothes, stylish clothes"/>
+</head>
+
+<body>
+<div id="wrapper">
+  {{> header}}
+  <main class="main">
+    <div id="orderForm">
+      <form id="order" action="#" method="#">
+
+        <div class="orderForm__filed">
+          <label for="country">Country</label>
+          <input type="text" id="country" name="country">
+        </div>
+
+        <div class="orderForm__inline-body">
+          <div class="orderForm__field1">
+            <label for="name">name</label>
+            <input type="text" id="name" name="name">
+          </div>
+          <div class="orderForm__field2">
+            <label for="lastname">last name</label>
+            <input type="text" id="lastname" name="secondName">
+          </div>
+        </div>
+
+        <div class="orderForm__field">
+          <label for="mail">your email</label>
+          <input type="email" id="mail" name="email">
+        </div>
+
+        <div class="orderForm__field">
+          <label for="address">address</label>
+          <input type="text" id="address" name="address">
+        </div>
+
+        <div class="orderForm__inline-body">
+          <div class="orderForm__field1">
+            <label for="postal-code">postal code</label>
+            <input type="text" id="postal-code" name="postalCode">
+          </div>
+          <div class="orderForm__field2">
+            <label for="city">city</label>
+            <input type="text" id="city" name="city">
+          </div>
+        </div>
+
+        <div class="orderForm__filed">
+          <label for="phone">phone number</label>
+          <input type="text" id="phone" name="phone">
+        </div>
+      </form>
+    </div>
+    <div class="orderForm__send-button">
+      <button type="submit">confirm</button>
+    </div>
+  </main>
+  <script type="text/javascript" src="/js/send_order_form.js"></script>
+  {{> footer}}
+</div>
+</body>
+</html>
