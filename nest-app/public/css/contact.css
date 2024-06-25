@@ -10,7 +10,7 @@ html, body {
     height: 100%;
     color: #ffffff;
     font-family: Courier, monospace;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 #wrapper {
@@ -27,7 +27,7 @@ a, li {
 
 .nav-link {
     transition: 0.7s ease;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .nav-item {
