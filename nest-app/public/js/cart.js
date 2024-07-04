@@ -70,6 +70,7 @@ checkOut.addEventListener('click', function (e) {
   if (cartStorage.length !== 0 && localStorage.getItem('userId')) {
     window.location.replace('https://shop-1ro8.onrender.com/order/orderForm');
   } else {
+    window.alert("please, sign in to your account")
     e.preventDefault();
   }
 });
