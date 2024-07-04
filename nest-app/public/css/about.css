@@ -85,51 +85,15 @@ menu {
     align-items: center;
 }
 
-
-.panel {
-    position: absolute;
-    overflow-x: hidden;
-}
-
 .panel .content {
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 .panel .description {
     width: 55%;
     text-align: left;
     margin: auto;
-}
-
-
-.top {
-    background-color: #8E060D;
-    height: 100%;
-    z-index: 2;
-}
-
-.handle {
-    height: 100%;
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 27%;
-    z-index: 3;
-}
-
-.skewed .handle {
-    transform-origin: top;
-}
-
-.skewed .top {
-    margin-left: -1000px;
-    width: calc(15vw + 1000px);
-}
-
-.skewed .top .content {
-    margin-left: 1000px;
 }
 
 .coords {
