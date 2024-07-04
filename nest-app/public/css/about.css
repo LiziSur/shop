@@ -6,11 +6,11 @@
 }
 
 html, body {
-    background-color: #000;
+    background-color: #8E060D;
     height: 100%;
     color: #fff;
     font-family: Courier, monospace;
-    font-size: 20px;
+    font-size: clamp(1rem, -1.164rem + 2.29vw, 2.5rem);
 }
 
 .main {
@@ -28,7 +28,7 @@ a, li {
 
 .nav-link {
     transition: 0.7s ease;
-    font-size: 20px;
+    font-size: clamp(0.875rem, -0.222rem + 1.16vw, 1.563rem);
 }
 
 .nav-item {
@@ -42,8 +42,16 @@ a, li {
 .header {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 30px 8%;
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    right: 20px;
 }
 
 .toggle-menu {
@@ -63,12 +71,11 @@ a, li {
 
 .logo {
     cursor: pointer;
-    margin-right: 16%;
 }
 
 h1 {
     color: red;
-    font-size: 22px;
+    font-size: clamp(1.375rem, -0.699rem + 2.19vw, 2.813rem);
     background-color: #FFFFFF;
 }
 
@@ -78,9 +85,6 @@ menu {
     align-items: center;
 }
 
-.splitview {
-    width: 100%;
-}
 
 .panel {
     position: absolute;
@@ -90,26 +94,15 @@ menu {
 .panel .content {
     display: flex;
     flex-direction: column;
-    width: 100vw;
     height: 100%;
 }
 
 .panel .description {
-    width: 60%;
-    font-size: 16px;
+    width: 55%;
     text-align: left;
     margin: auto;
 }
 
-.panel .description p {
-    margin-top: 1em;
-}
-
-.bottom {
-    background-color: #000;
-    height: 100%;
-    z-index: 1;
-}
 
 .top {
     background-color: #8E060D;
@@ -142,13 +135,14 @@ menu {
 .coords {
     text-align: right;
     color: #fff;
-    font-size: 12px;
+    font-size: clamp(0.75rem, 0.351rem + 0.42vw, 1rem);
     position: absolute;
     right: 20px;
     top: 76%;
 }
 
 .circle {
+    margin-bottom: 40px;
     align-self: center;
     justify-self: center;
     font-size: 14px;
@@ -235,18 +229,6 @@ svg {
         flex-direction: column;
     }
 
-    .menu {
-        z-index: 3;
-        background-color: #000;
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        gap: 0;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-    }
-
     .nav-item {
         margin: 16px 0;
         z-index: 3;
@@ -258,5 +240,15 @@ svg {
 
     .body {
         font-size: 16px;
+    }
+}
+
+@media  screen and (min-width: 1850px) {
+    .nav-item {
+        margin-left: 30px;
+    }
+    .soc-nets img {
+        width: 80px;
+        height: 80px;
     }
 }

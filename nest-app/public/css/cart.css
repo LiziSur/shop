@@ -10,7 +10,7 @@ html, body {
     height: 100%;
     color: #fff;
     font-family: Courier, monospace;
-    font-size: 20px;
+    font-size: clamp(1rem, -1.164rem + 2.29vw, 2.5rem);
 }
 
 #wrapper {
@@ -27,7 +27,7 @@ a, li {
 
 .nav-link {
     transition: 0.7s ease;
-    font-size: 20px;
+    font-size: clamp(0.875rem, -0.222rem + 1.16vw, 1.563rem);
 }
 
 .nav-item {
@@ -68,7 +68,7 @@ a, li {
 
 h1 {
     color: red;
-    font-size: 22px;
+    font-size: clamp(1.375rem, -0.699rem + 2.19vw, 2.813rem);
     background-color: #FFFFFF;
 }
 
@@ -249,6 +249,16 @@ menu {
 
     #shipping {
         font-size: 15px;
+    }
+}
+
+@media  screen and (min-width: 1850px) {
+    .nav-item {
+        margin-left: 30px;
+    }
+    .soc-nets img {
+        width: 80px;
+        height: 80px;
     }
 }
 
